@@ -3,19 +3,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>変身!</title>
-</head>
-<body>
-<label>
-	<input type="checkbox" name="checkbox" value="1">
-	<div id="belt"></div>
-	<div id="base"></div>
-	<div id="frames"><div id="typhoon"><div id="wings"></div></div></div>
-	<div id="pins"></div>
-	<div id="cover"></div>
-	<div id="lights">
-		<ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
-	</div>
-</label>
 <style>
 :root{
 	--belt-height:600px;
@@ -32,7 +19,6 @@
 	margin:0;
 	list-style:none;
 }
-
 
 label{
 	display:flex;
@@ -101,8 +87,6 @@ label{
 	box-shadow:1px 1px 0 1px rgba(0, 0, 0, 0.4), inset 3px 3px rgba(0,0,0,0.8);
 }
 
-
-
 #typhoon{
 	width:var(--typhoon-size);
 	height:var(--typhoon-size);
@@ -113,7 +97,6 @@ label{
 	justify-content:center;
 	z-index:2;
 }
-
 
 #wings{
 	background:repeating-conic-gradient(from 0deg, red 0deg 35deg, transparent 35deg 45deg);
@@ -150,7 +133,6 @@ label{
 	position:absolute;
 }
 
-
 #pins:after{
 	content:"";
 	position:absolute;
@@ -176,7 +158,6 @@ label{
 	filter:blur(1px);
 	z-index:3;
 }
-
 
 #lights{
 	opacity:0;
@@ -274,7 +255,6 @@ input:checked ~ #lights{
 	animation:light_on .1s linear 2s infinite;
 }
 
-
 @keyframes henshin {
 	0%   { transform: rotate(0deg); }
 	100% { transform: rotate(360deg); }
@@ -286,6 +266,20 @@ input:checked ~ #lights{
 }
 
 </style>
-
+</head>
+<body>
+<label>
+	<input type="checkbox" name="checkbox" value="1">
+	<div id="belt"></div>
+	<div id="base"></div>
+	<div id="frames"><div id="typhoon"><div id="wings"></div></div></div>
+	<div id="pins"></div>
+	<div id="cover"></div>
+	<div id="lights">
+		<ul>
+			<li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+		</ul>
+	</div>
+</label>
 </body>
 </html>
